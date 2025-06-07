@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+</head>
+<body>
+    <header>
+        <div class="conteiner">
+            <a href="" class="BotaoContato">Estação Skate</a>
+            <div class="header-conteiner">
+                <a href="#resumo">Resumo</a>
+                <a href="#artigos">Artigos</a>
+                <a href="#sobre">Sobre</a>
+                <a href="login/">Admin</a>
+            </div>
+        </div>
+    </header>
+    <section id="resumo">
+        <div class="ConteinerResumo">
+            <div class="carrossel">
+                <img src="/media/Foto4.png" alt="Logo">
+            </div>
+            <div class="textoResumo">
+                <h1>Skate que transforma!</h1>
+                <p>Estação Skate é uma organização social que transforma realidades por meio da cultura do skate.  no coração do Complexo do Alemão,   a ONG utiliza o skate como principal ferramenta de inclusão, educação  e lazer, oferecendo a crianças e adolescentes um espaço seguro para crescer, aprender e sonhar.</p>
+            </div>
+        </div>
+    </section>
+    <section id="artigos">
+        <h1 class="h1projeto">Artigos:</h1>
+        <div class="ConteinerProjetos">
+            {% for artigo in artigos %}
+                <div class="moldura">
+                    <h2><a href="{% url 'artigo' artigo.id %}">{{ artigo.titulo }}</a></h2>
+                    {% if artigo.imagem %}
+                        <img src="{{ artigo.imagem.url }}" alt="{{ artigo.titulo }}" style="max-width: 100%;">
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+    <section id="sobre">
+        <div class="SobreConteiner">
+            <div class="sobre">
+                <div class="sobretexto">
+                    <br>
+                    <br>
+                    <h1>"Tudo começou com a minha filha"</h1>
+                    <h2>Jacob Cassiano de Oliveira</h2>
+                    <p> Inspirado pela paixão da filha de Jacob 
+                        pelo skate, o trabalho desenvolvido pelo 
+                        projeto Estação Skate usa o esporte 
+                        como principal ferramenta de introdução 
+                        à cultura e ao lazer, viabilizando o 
+                        preparo de jovens do Complexo do 
+                        Alemão para o pleno exercício de 
+                        sua cidadania
+                       </p>
+                        <div class="botoes-sociais">
+                            <a href="https://www.instagram.com/estacao.skate?utm_source=qr&igsh=dGFuc2sxN3B3N3A%3D" target="_blank" class="botao linkedin">
+                                Instagram
+                            </a>
+                        </div>
+                </div>
+                <div class="sobretexto2" style="text-align: center;">
+                    <img src="/media/jacob.png" alt="Jacob C. de Oliveira" style="max-width: 100%; height: auto;">
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="conteinerfooter">
+        <p>&copy; 2025 Estação Skate - Todos os direitos reservados</p>
+    </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+</script>
+</body>
+</html>
