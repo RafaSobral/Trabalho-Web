@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+        <div class="conteinerlogin">
+            <div class="login">
+                <form action="{% url 'login' %}" method="post">{% csrf_token %} 
+                    <input type="text" placeholder="Nome:" name="username" class="input">
+                    <br>
+                    <input type="password" placeholder="Senha:" name="senha" class="input">
+                    <br>
+                    <input type="submit" value="Login" class="botaologin">
+                </form>
+                <a href="/blog/home/">
+                    <button>home</button>
+                </a>
+            </div>
+        </div>
+</body>
+</html>
