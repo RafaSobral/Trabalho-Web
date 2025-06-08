@@ -1,0 +1,813 @@
+/* Estilizacao da homepage */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background-image: url('../imagens/foto10.jpg');
+    background-size: cover;
+    background-repeat: repeat; 
+    background-position: center; 
+  }
+
+.conteiner{
+    width: auto;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 7%;
+    padding-right: 5%;
+    padding-top: 2%;
+    gap: 20px;
+}
+
+.header-conteiner{
+    display: flex;
+    justify-content: space-between;
+    gap: 35px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    position: fixed;
+    z-index: 1000;
+    margin-left: 55%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+  }
+
+.BotaoContato{
+    border-radius: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: white;
+    position: fixed;
+    z-index: 1000;
+}
+
+/* Estilizaçao da Section Resumo */
+
+.ConteinerResumo{
+    width: 1100px;
+    height: 400px;
+    display: flex;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-right: 5%;
+    padding-left: 2%;
+    background: rgba(255, 255, 255, 0.062); 
+    backdrop-filter: blur(10px); 
+    border-radius: 15px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-left: 6%;
+    margin-top: 3%;
+}
+
+.carrossel {
+    width: 65%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrossel img {
+    width: 600px;
+    height: 400px;
+    border-radius: 15px;
+}
+
+
+
+.textoResumo h1{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    text-align: left;
+}
+
+.textoResumo{
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 17px;
+    text-align: left;
+    padding-left: 3%;
+}
+
+/* Estilizacao Section Projetos */
+
+.ConteinerProjetos{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 10px; 
+    padding-left: 8%;
+    padding-bottom: 5%;
+    
+}
+
+.h1projeto{
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+    margin-left: 45%;
+    padding-top: 5%;
+}
+
+.moldura{
+    cursor: pointer;
+    width: 200px;
+    height: 300px;
+    text-align: left;
+    position: relative;
+    margin-bottom: 20%;
+    background: rgba(255, 255, 255, 0.062); 
+    backdrop-filter: blur(10px); 
+    border-radius: 15px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.moldura img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px; 
+}
+
+
+.moldura :hover {
+    transition: transform 0.3s ease;
+    transform: scale(1.2);
+}
+
+.moldura h2{
+    position: absolute;
+    top: 20%; 
+    left: -15%;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 1000;
+}
+
+.SobreConteiner{
+    width: auto;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+.sobre{
+    width: 1000px;
+    height: 500px;
+    display: flex;
+    background: rgba(255, 255, 255, 0.062); 
+    backdrop-filter: blur(10px); 
+    border-radius: 15px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sobretexto2 {
+  width: 450px;
+  height: 500px;
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center;        
+  padding-left: 100px;         
+  padding-right: 30px;
+}
+
+
+.sobretexto2 img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+  
+}
+
+
+.sobretexto{
+    color: white;
+    text-align: left;
+    width: 550px;
+    height: 500px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 17px;
+    margin-left: 5%;
+    text-align: left;
+}
+
+.sobretexto h1{
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 50px;
+    text-align: left;
+}
+
+.conteinerfooter{
+    width: auto;
+    height: 50px;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+    background: rgba(0, 0, 0, 0.521); 
+    backdrop-filter: blur(1px); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.botoes-sociais {
+    display: flex;
+    gap: 15px; 
+}
+
+.botao {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.botao.linkedin:hover {
+    background-color: #0a66c2; 
+
+.botao.linkedin {
+    background-color: #004182; 
+
+
+/* Responsividade para tablets (até 1024px) */
+@media (max-width: 1024px) {
+  .ConteinerResumo {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    margin: 5% auto;
+  }
+
+  .carrossel {
+    width: 100%;
+    height: auto;
+  }
+
+  .carrossel img {
+    width: 100%;
+    height: auto;
+  }
+
+  .textoResumo {
+    padding-left: 0;
+    padding-top: 20px;
+    font-size: 16px;
+  }
+
+  .header-conteiner {
+    margin-left: 40%;
+    gap: 20px;
+  }
+
+  .ConteinerProjetos {
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 5%;
+  }
+
+  .h1projeto {
+    margin-left: 35%;
+  }
+
+  .sobre {
+    flex-direction: column;
+    height: auto;
+    width: 90%;
+    margin: auto;
+  }
+
+  .sobretexto2 {
+    width: 100%;
+    padding: 20px;
+    justify-content: center;
+  }
+
+  .sobretexto {
+    width: 100%;
+    margin-left: 0;
+    padding: 20px;
+  }
+}
+
+/* Responsividade para celulares (até 768px) */
+@media (max-width: 768px) {
+  .conteiner {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .header-conteiner {
+    flex-direction: column;
+    position: static;
+    margin-left: 0;
+    gap: 10px;
+  }
+
+  .BotaoContato {
+    position: static;
+    font-size: 16px;
+  }
+
+  .ConteinerResumo {
+    width: 95%;
+    padding: 10px;
+    margin-top: 10%;
+  }
+
+  .carrossel img {
+    width: 100%;
+    height: auto;
+  }
+
+  .textoResumo h1 {
+    font-size: 30px;
+  }
+
+  .ConteinerProjetos {
+    grid-template-columns: 1fr;
+    padding-left: 5%;
+    gap: 20px;
+  }
+
+  .h1projeto {
+    font-size: 24px;
+    margin-left: 40%;
+  }
+
+  .moldura {
+    width: 70%;
+    height: auto;
+    margin-left: 15%;
+  }
+
+
+  .sobre {
+    flex-direction: column;
+    width: 95%;
+    height: auto;
+    padding: 10px;
+  }
+
+  .sobretexto, .sobretexto2 {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .sobretexto h1 {
+    font-size: 30px;
+  }
+
+  .conteinerfooter {
+    font-size: 16px;
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+    margin-top: 100%;
+  }
+
+  .botoes-sociais {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .botao {
+    padding: 8px 12px;
+    font-size: 0.9em;
+  }
+}
+
+
+
+
+/* Estilizacao do Login */
+
+
+.conteinerlogin{
+    width: 95%;
+    height: 700px;
+    display: grid;
+    padding: 2%;
+    justify-content: center;
+
+}
+
+.login{
+    width: 400px;
+    height: 250px;
+    display: flex;
+    background: rgba(255, 255, 255, 0.062); 
+    backdrop-filter: blur(1px); 
+    border-radius: 15px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    margin-top: 20%;
+    padding-top: 10%;
+
+}
+
+.input{
+    width: 300px;
+    height: 35px;
+    margin-top: 10%;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.363); 
+    backdrop-filter: blur(1px); 
+    border-radius: 15px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-left: 12%;
+}
+
+.botaologin{
+    padding: 12px 24px;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px); 
+    border: 2px solid rgba(255, 255, 255, 0.3); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+    transition: all 0.3s ease; 
+    cursor: pointer;
+    margin-top: 10%;
+    margin-left: 15%;
+}
+
+.login a button{
+    padding: 12px 24px;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px); 
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease; 
+    cursor: pointer;
+    margin-top: 175px;
+    margin-left: -150%;
+}
+
+/* estilizacao das configuracoes */
+
+.containerconfig .adicionar{
+    margin-left: 600px; /
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+     background-color: #4CAF50; 
+    color: white;
+}
+
+.artigos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    text-align: left;
+}
+
+.artigo {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.artigo h2 {
+    margin-right: auto; 
+}
+
+.botaoeditar, .botaodeletar {
+    margin-left: 10px; 
+    padding: 8px 15px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.botaoeditar {
+    background-color: #4CAF50; 
+    color: white;
+}
+
+.botaodeletar {
+    background-color: #F44336; 
+    color: white;
+}
+
+.containerconfig{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.containerconfig h1{
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+    color: white;
+}
+
+.containerconfig button{
+    margin-left: 10px; 
+    padding: 8px 15px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+     background-color: #4CAF50;
+    color: white;
+}
+
+.conteinerconfiguracoes{
+    width: 1000px;
+    margin-left: 13%;
+    margin-top: 5%;
+}
+
+
+/* Estilizacao página Adicionar Artigo */
+body.adicionar-artigo {
+    background-color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+}
+
+body.adicionar-artigo h1 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+body.adicionar-artigo form {
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px); 
+    border: 2px solid rgba(255, 255, 255, 0.3); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+    transition: all 0.3s ease; 
+    height: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    align-items: center; 
+    justify-content: center; 
+}
+
+
+body.adicionar-artigo .date {
+    color: rgb(255, 255, 255); 
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+body.adicionar-artigo input[type="text"],
+body.adicionar-artigo textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #ffffff65; 
+    transition: all 0.3s ease;
+    width: 100%; 
+    max-width: 500px; 
+    margin-bottom: 15px;
+}
+
+body.adicionar-artigo input[type="text"]:focus,
+body.adicionar-artigo textarea:focus {
+    border-color: green;
+    outline: none;
+}
+
+
+body.adicionar-artigo button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: green; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 500px; 
+}
+
+body.adicionar-artigo button:hover {
+    background-color: darkgreen; 
+}
+
+body.adicionar-artigo textarea {
+    resize: vertical;
+}
+
+
+body.adicionar-artigo form p {
+    color: white;
+    margin-bottom: 20px;
+}
+
+
+/* estilizacao da pagina de editar  */
+
+body.editar-artigo {
+    background-color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+}
+
+body.editar-artigo h1 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+body.editar-artigo form {
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+    transition: all 0.3s ease; 
+    height: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    align-items: center; 
+    justify-content: center; 
+}
+
+/* Estilo para a Data */
+body.editar-artigo .date {
+    color: rgb(255, 255, 255); 
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilo para os campos de input */
+body.editar-artigo input[type="text"],
+body.editar-artigo textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #ffffff65;
+    transition: all 0.3s ease;
+    width: 100%; 
+    max-width: 500px; 
+    margin-bottom: 15px;
+}
+
+body.editar-artigo input[type="text"]:focus,
+body.editar-artigo textarea:focus {
+    border-color: green; 
+    outline: none;
+}
+
+/* Estilo para o botão */
+
+body.editar-artigo button:hover {
+    background-color: darkgreen; 
+}
+
+
+body.editar-artigo form p {
+    color: white;
+    margin-bottom: 20px;
+}
+
+
+
+.bg {
+    background-image: url('../imagens/foto10.jpg');
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    color: white;
+}
+
+/* Navbar simples no topo */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 0 0 20px 20px;
+}
+
+.navbar h2 {
+    font-size: 24px;
+}
+
+.navbar nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Container central */
+.artigo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    padding: 20px;
+    
+}
+
+/* Cartão de conteúdo */
+.artigo-card {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(12px);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    width: 100%;
+    text-align: center; 
+}
+
+.artigo-card h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.artigo-card p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.artigo-card img {
+    width: auto;
+    height: auto;
+    max-width: 400px;
+    max-height: 400px;
+    align-items: center;
+}
