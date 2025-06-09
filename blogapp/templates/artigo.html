@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ artigo.titulo }}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class="bg">
+
+    <div class="navbar">
+        <h2>Estação Skate</h2>
+        <nav>
+            <a href="#">Resumo</a>
+            <a href="#">Artigos</a>
+            <a href="#">Sobre</a>
+            <a href="#">Admin</a>
+        </nav>
+    </div>
+
+    <div class="artigo-container">
+        <div class="artigo-card">
+            <h1>{{ artigo.titulo }}</h1>
+            <img src="{{ artigo.imagem.url }}" alt="{{ artigo.titulo }}" style="max-width: 100%;">
+            <p>{{ artigo.conteudo }}</p>
+            <p>Publicado em: {{ artigo.data_publicacao }}</p>
+            <p>Última Edição: {{ artigo.data_edicao|date:"d/m/Y H:i" }}</p>
+        </div>
+    </div>
+
+</body>
+</html>

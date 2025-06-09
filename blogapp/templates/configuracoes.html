@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="conteinerconfiguracoes">
+    <div class="containerconfig">
+        <h1>Configurações</h1>
+        <a href="{% url 'adicionar' %}">
+            <button class="adicionar">Adicionar</button>
+        </a>
+        <a href="/blog/home/">
+            <button class="home">Home</button>
+        </a>
+    </div>
+    <div class="artigos">
+        {% for artigo in artigos %}
+            <div class="artigo">
+                <h2>{{ artigo.titulo }}</h2>
+                <a href="{% url 'editar' artigo.id %}">
+                    <button class="botaoeditar">Editar</button>
+                </a>
+                <form action="{% url 'deletar' artigo.id %}" method="POST">
+                    {% csrf_token %}
+                    <button class="botaodeletar" type="submit">Deletar</button>
+                </form>
+            </div>
+        {% empty %}
+            <p>Nenhum artigo encontrado.</p>
+        {% endfor %}
+    </div>
+    </div>
+</body>
+</html>
