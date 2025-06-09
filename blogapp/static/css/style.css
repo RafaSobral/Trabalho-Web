@@ -240,11 +240,10 @@ a {
 
 .botao.linkedin:hover {
     background-color: #0a66c2; 
-
+}
 .botao.linkedin {
     background-color: #004182; 
-
-
+}
 /* Responsividade para tablets (até 1024px) */
 @media (max-width: 1024px) {
   .ConteinerResumo {
@@ -478,7 +477,7 @@ a {
 /* estilizacao das configuracoes */
 
 .containerconfig .adicionar{
-    margin-left: 600px; /
+    margin-left: 600px;
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
     cursor: pointer;
