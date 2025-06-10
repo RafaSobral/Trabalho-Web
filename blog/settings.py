@@ -28,6 +28,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://trabalho-web-12o4.onrender.com',
+]
+
 
 # Application definition
 
