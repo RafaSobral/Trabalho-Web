@@ -5,11 +5,9 @@ html {
 }
 
 :root {
-  /* Neutros */
   --color-dark:   #1A1A1A;
   --color-light:  #F5F5F5;
 
-  /* Primárias */
   --color-coral:      #FF6F61;
   --color-coral-claro: #FFA79D;
   --color-teal:       #4ECDC4;
@@ -97,7 +95,6 @@ a {
 }
 
 
-
 .textoResumo h1{
     color: var(--color-light);
     font-family: 'Roboto', sans-serif;
@@ -162,7 +159,6 @@ a {
     transform: scale(1.02);
 }
 
-/* Categoria tag */
 .moldura::before {
     content: 'Artigo';
     position: absolute;
@@ -209,7 +205,6 @@ a {
     
 }
 
-/* Seta indicativa */
 .moldura h2::after {
     content: '→';
     position: absolute;
@@ -589,6 +584,7 @@ a {
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
+
 .adicionar {
     background: linear-gradient(135deg, #3483fa, #2366d1);
     color: var(--color-light);
@@ -630,6 +626,28 @@ a {
     transform: translateY(-3px);
     background: #323232;
 }
+
+.Editor {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+    color: var(--color-dark);
+    background: var(--color-light);
+    border: none;
+    border-radius: 12px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.Editor:hover {
+    transform: scale(1.02);
+}
+
 
 .artigo h2 {
     font-size: 20px;
@@ -693,178 +711,250 @@ a {
 
 /* Estilizacao página Adicionar Artigo */
 body.adicionar-artigo {
-    background-color: var(--color-light);
+    margin: 0;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #141414, #1c1c1c);
     font-family: 'Raleway', sans-serif;
-    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    height: 100vh;
+    min-height: 100vh;
+    color: var(--color-dark);
+    box-sizing: border-box;
 }
 
 body.adicionar-artigo h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #f5f5f5;
+    margin-bottom: 30px;
+    text-align: center;
+    color: var(--color-teal);
+}
+
+body.adicionar-artigo .date {
+    font-size: 1rem;
     color: var(--color-light);
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     text-align: center;
 }
 
 body.adicionar-artigo form {
+    width: 100%;
+    max-width: 700px;
+    padding: 40px;
+    background: #232323;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
     display: flex;
     flex-direction: column;
-    background: rgba(255, 255, 255, 0.1); 
-    backdrop-filter: blur(10px); 
-    border: 2px solid rgba(255, 255, 255, 0.3); 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
-    transition: all 0.3s ease; 
-    height: 500px;
-    padding: 20px;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 600px;
-    align-items: center; 
-    justify-content: center; 
+    gap: 20px;
+    backdrop-filter: blur(12px);
+    border: 1px solid #333;
+    animation: fadeIn 0.5s ease;
 }
-
-
-body.adicionar-artigo .date {
-    color: rgb(255, 255, 255); 
-    font-family: 'Raleway', sans-serif;
-    font-size: 16px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
 
 body.adicionar-artigo input[type="text"],
-body.adicionar-artigo textarea {
-    padding: 10px;
+body.adicionar-artigo textarea,
+body.adicionar-artigo input[type="file"],
+body.adicionar-artigo select {
+    width: 100%;
+    padding: 14px 16px;
     font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #ffffff65; 
+    border: none;
+    border-radius: 10px;
+    background-color: #2f2f2f;
+    color: var(--color-light);
     transition: all 0.3s ease;
-    width: 100%; 
-    max-width: 500px; 
-    margin-bottom: 15px;
+    box-shadow: inset 0 0 0 2px transparent;
 }
 
 body.adicionar-artigo input[type="text"]:focus,
-body.adicionar-artigo textarea:focus {
-    border-color: green;
+body.adicionar-artigo textarea:focus,
+body.adicionar-artigo input[type="file"]:focus,
+body.adicionar-artigo select:focus {
     outline: none;
-}
-
-
-body.adicionar-artigo button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: green; 
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    width: 100%;
-    max-width: 500px; 
-}
-
-body.adicionar-artigo button:hover {
-    background-color: darkgreen; 
+    box-shadow: inset 0 0 0 2px var(--color-teal);
+    background-color: #383838;
 }
 
 body.adicionar-artigo textarea {
     resize: vertical;
+    min-height: 120px;
 }
 
+.adicionar-artigo button {
+    background: linear-gradient(135deg, #00a97f, #009973);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 16px rgba(0, 200, 151, 0.1);
+}
+
+.adicionar-artigo button:hover {
+    background: var(--color-teal);
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 200, 151, 0.1);
+}
 
 body.adicionar-artigo form p {
-    color: white;
-    margin-bottom: 20px;
+    color: var(--color-light);
+    font-size: 15px;
 }
+
+.Editor-voltar button {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+    color: var(--color-dark);
+    background: var(--color-light);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 20px auto;
+    display: block;
+}
+
+.Editor-voltar button:hover {
+    background: var(--color-light);
+    transform: scale(1.02);
+}
+/* Animação suave */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
 
 
 /* estilizacao da pagina de editar  */
 
 body.editar-artigo {
-    background-color: #ffffff;
+    margin: 0;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #141414, #1c1c1c);
     font-family: 'Raleway', sans-serif;
-    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    height: 100vh;
+    min-height: 100vh;
+    color: var(--color-light);
+    box-sizing: border-box;
 }
 
 body.editar-artigo h1 {
-    font-size: 2rem;
-    color: #ffffff;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    text-align: center;
+    color: var(--color-coral);
+}
+
+body.editar-artigo p {
+    font-size: 1rem;
+    color: #bbbbbb;
+    margin-bottom: 30px;
     text-align: center;
 }
 
 body.editar-artigo form {
+    width: 100%;
+    max-width: 700px;
+    padding: 40px;
+    background: #232323;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
-    background: rgba(255, 255, 255, 0.1); 
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.3); 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
-    transition: all 0.3s ease; 
-    height: 500px;
-    padding: 20px;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 600px;
-    align-items: center; 
-    justify-content: center; 
+    gap: 20px;
+    backdrop-filter: blur(12px);
+    border: 1px solid #333;
+    animation: fadeIn 0.5s ease;
 }
 
-/* Estilo para a Data */
-body.editar-artigo .date {
-    color: rgb(255, 255, 255); 
+.Editor button {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
     font-family: 'Raleway', sans-serif;
-    font-size: 16px;
-    margin-bottom: 20px;
-    text-align: center;
+    color: var(--color-dark);
+    background: var(--color-light);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 20px auto;
+    display: block;
 }
 
-/* Estilo para os campos de input */
+.Editor button:hover {
+    background: var(--color-light);
+    transform: scale(1.02);
+}
+
 body.editar-artigo input[type="text"],
-body.editar-artigo textarea {
-    padding: 10px;
+body.editar-artigo textarea,
+body.editar-artigo input[type="file"],
+body.editar-artigo select {
+    width: 100%;
+    padding: 14px 16px;
     font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #ffffff65;
+    border: none;
+    border-radius: 10px;
+    background-color: #2f2f2f;
+    color: var(--color-light);
     transition: all 0.3s ease;
-    width: 100%; 
-    max-width: 500px; 
-    margin-bottom: 15px;
+    box-shadow: inset 0 0 0 2px transparent;
 }
 
 body.editar-artigo input[type="text"]:focus,
-body.editar-artigo textarea:focus {
-    border-color: green; 
+body.editar-artigo textarea:focus,
+body.editar-artigo input[type="file"]:focus,
+body.editar-artigo select:focus {
     outline: none;
+    box-shadow: inset 0 0 0 2px var(--color-coral-claro);
+    background-color: #383838;
 }
 
-/* Estilo para o botão */
-
-body.editar-artigo button:hover {
-    background-color: darkgreen; 
+body.editar-artigo textarea {
+    resize: vertical;
+    min-height: 120px;
 }
 
-
-body.editar-artigo form p {
+body.editar-artigo .botaoeditar {
+    background: var(--color-coral);
     color: white;
-    margin-bottom: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 16px rgba(255, 107, 107, 0.1);
+    width: 100%;
+    max-width: 500px;
+    align-self: center;
 }
+
+body.editar-artigo .botaoeditar:hover {
+    background: var(--color-coral-claro);
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(255, 107, 107, 0.1);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
 
 
 
